@@ -1,4 +1,4 @@
-package com.example.blocks_game
+package br.com.ktk.blocks_game
 
 import io.flutter.embedding.android.FlutterActivity
 

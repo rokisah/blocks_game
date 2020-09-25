@@ -1,7 +1,6 @@
 import 'package:blocks_game/app-state-observer.dart';
 import 'package:blocks_game/blocks-game.dart';
 import 'package:flame/flame.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/util.dart';
 import 'package:flutter/services.dart';
@@ -22,6 +21,11 @@ void main() async {
     'blocks/green.png',
     'blocks/orange.png',
     'blocks/yellow.png',
+    'branding/title.png',
+    'branding/title2.png',
+    'ui/start-button.png',
+    'ui/success.png',
+    'ui/fail.png',
   ]);
 
   SharedPreferences storage = await SharedPreferences.getInstance();
@@ -30,10 +34,6 @@ void main() async {
   runApp(game.widget);
   WidgetsBinding.instance.addObserver(AppStateObserver());
 
-  TapGestureRecognizer tapper = TapGestureRecognizer();
-  tapper.onTapDown = game.onTapDown;
-
-  flameUtil.addGestureRecognizer(tapper);
 }
 
 

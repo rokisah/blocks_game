@@ -1,12 +1,12 @@
-import 'package:blocks_game/blocks-game.dart';
 import 'package:blocks_game/components/content.dart';
 import 'package:blocks_game/enums/content-enum.dart';
+import 'package:blocks_game/views/game-view.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Block {
-  final BlocksGame game;
+  final GameView game;
   Sprite sprite;
   Sprite selectedSprite;
   Rect rect;
@@ -34,8 +34,8 @@ class Block {
       this.sprite = Sprite('blocks/block_black.png');
       this.selectedSprite = Sprite('blocks/block_red.png');
     }
-    this.rect = Rect.fromLTWH((x + 1) * game.tileSize, (y + 3) * game.tileSize,
-        game.tileSize, game.tileSize);
+    this.rect = Rect.fromLTWH((x + 1) * game.game.tileSize, (y + 3) * game.game.tileSize,
+        game.game.tileSize, game.game.tileSize);
     // this._content = Content(game, contentEnum, this);
     this._content = Content(game, contentEnum, this);
   }

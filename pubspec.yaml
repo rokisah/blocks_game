@@ -18,8 +18,14 @@ dependencies:
   shared_preferences: ^0.5.10
 
 dev_dependencies:
+  flutter_launcher_icons: "^0.8.0"
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/icon.png"
 
 flutter:
   uses-material-design: true
@@ -33,3 +39,8 @@ flutter:
     - assets/images/blocks/green.png
     - assets/images/blocks/orange.png
     - assets/images/blocks/yellow.png
+    - assets/images/branding/title.png
+    - assets/images/branding/title2.png
+    - assets/images/ui/start-button.png
+    - assets/images/ui/success.png
+    - assets/images/ui/fail.png
